@@ -65,6 +65,11 @@ We used the **Goodreads Books Dataset**, which contains over 23,000 books and th
 - Eragon  
 - Harry Potter and the Sorcerer’s Stone  
 
----
 
-## File Structure
+
+📂 File Structure
+Copy code
+📁 Book-Recommendation-AI
+├── 📄 book_recommender.ipynb
+├── 📄 books.csv
+└── 📄 README.md
