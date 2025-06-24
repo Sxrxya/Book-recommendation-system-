@@ -1,75 +1,66 @@
 # Book Recommendation System using AI
+# 📚 AI Book Recommender System
 
-This project is a basic AI-powered book recommendation system developed using Python and Google Colab. It recommends similar books based on the author's name and genre using content-based filtering (TF-IDF + cosine similarity). This is my first public AI product, aimed at solving a real-world problem with simple yet effective ML logic.
-
----
-
-## Overview
-
-This system allows users to input a book title, and the model will return a list of similar books. It uses NLP techniques to convert textual metadata like author names and genres into vectors and compares them using cosine similarity.
+This is a full-stack AI-powered Book Recommendation System built using **Sentence-BERT**, **Faiss**, **Flask**, and **React**. It integrates the Google Books API to fetch real-time data and provides semantic search recommendations based on user input.
 
 ---
 
-## Features
-- Suggests top 5 similar books instantly
-- Works fully on Google Colab and mobile Python apps like Pydroid or Kaggle
-- Dataset is easy to use and public
-- Beginner-friendly code with practical value
+## 🚀 Features
+
+- 🔍 Semantic book search using Sentence-BERT + Faiss
+- 📚 Real-time book info via Google Books API
+- 🧠 AI backend built with Flask
+- 🌐 Modern frontend built with React
+- ⚡ Fast local deployment and GitHub-ready
 
 ---
 
-## Tech Stack
-- **Language**: Python  
-- **Libraries**: Pandas, Scikit-learn (TF-IDF, Cosine Similarity)  
-- **Platform**: Google Colab / Pydroid / Kaggle
+## 🧠 Tech Stack
+
+| Layer    | Tech                 |
+|----------|----------------------|
+| Backend  | Python, Flask, Faiss, Sentence-Transformers |
+| Frontend | React, HTML, CSS     |
+| API      | Google Books API     |
 
 ---
 
-## Dataset Information
+## 📁 Project Structure
 
-We used the **Goodreads Books Dataset**, which contains over 23,000 books and their metadata. Key features used:
-- `title`
-- `authors`
-- `genres` (if available)
-- `average_rating`
-
-**Dataset Source**:  
-[Kaggle - Goodreads Books Dataset](https://www.kaggle.com/datasets/jealousleopard/goodreadsbooks)
-
-**File Used**:  
-`books.csv`
-
-**Note**: If `genres` column is missing, the model can still work using only author + title.
-
----
-
-## How to Run the Project
-
-1. Download the dataset CSV file from Kaggle.
-2. Upload it into your Colab project or mobile app like Pydroid.
-3. Open and run the Colab notebook: `book_recommender.ipynb`.
-4. When prompted, enter the name of a book (e.g., *The Hobbit*).
-5. Get 5 recommended books instantly.
-
----
-
-## Example Input & Output
-
-**Input**:  
-`The Hobbit`
-
-**Output**:
-- The Fellowship of the Ring  
-- The Two Towers  
-- The Return of the King  
-- Eragon  
-- Harry Potter and the Sorcerer’s Stone  
+book-recommender/
+├── backend/ # Flask API
+│ ├── app.py
+│ ├── index_faiss.py
+│ ├── google_books.py
+│ ├── embedder.py
+│ └── requirements.txt
+├── frontend/ # React App
+│ ├── public/
+│ └── src/
+├── .gitignore
+└── README.md
 
 
+## 🧪 How to Run
 
-📂 File Structure
-Copy code
-📁 Book-Recommendation-AI
-├── 📄 book_recommender.ipynb
-├── 📄 books.csv
-└── 📄 README.md
+### 🖥 Backend
+
+```bash
+cd backend
+pip install -r requirements.txt
+python app.py
+It will run at: http://127.0.0.1:5000
+
+🌐 Frontend
+cd frontend
+npm install
+npm start
+It will run at: http://localhost:3000
+
+🔗 API Endpoint
+GET /recommend?q=search_term
+Example:
+http://127.0.0.1:5000/recommend?q=atomic%20habits
+🙌 Built by
+Suriyaprakash M
+AI & Data Science Student 
